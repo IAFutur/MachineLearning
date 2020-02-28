@@ -1,0 +1,7 @@
+bjvkenverknnrv
+
+    <html>
+      <head>
+      pip install tensorflow-gpu
+      </head>
+    </html>
