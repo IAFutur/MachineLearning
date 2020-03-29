@@ -1,36 +1,26 @@
 # Comment installer Tensorflow sur votre machine 
 
-Tensorflow est une bibliothèque de composants que vous pouvez ajouter à votre éditeur de code en langage Python afin de développer des applications de Machine Learning.
-La grande force de la bibliothèque Tensorflow est sa flexibilité.
-En effet, Tensorflow est assez versatile pour être utilisé avec différents hardware pour la création de l'application ML puis pour son déploiement sur tout type de plateformes incluant les OS PC et Mac, les mobiles, les serveurs ou encore les navigateurs.
-En suivant ces instructions vous pourrez ainsi installer facilement et correctement Tensorflow sur votre matériel sans prise de tête. 
+Tensorflow est une bibliothèque de composants que vous pouvez ajouter à votre éditeur de code en langage Python afin de développer des applications de Machine Learning. La grande force de la bibliothèque Tensorflow est sa flexibilité. En effet, Tensorflow est assez versatile pour être utilisé avec différents hardware pour la création d'applications ML puis pour son déploiement sur tout type de plateformes incluant les OS PC et Mac, les mobiles, les serveurs ou encore les navigateurs internet. En suivant ces instructions vous pourrez ainsi installer facilement et correctement Tensorflow sur votre matériel sans prise de tête. Comme j'utilise majoritairement Windows 10, toutes les explications suivantes seront faites sur cet OS.
 
 ## Tensorflow CPU et TPU 
 
-Ce sont surement les versions les moins démocratisées de la bibliothèque comme elles sont les plus contraignantes. 
-Tensorflow TPU est une version optimisée uniquement pour des machines virtuelles développées par Google donc vous aurez assez de chances de les utiliser donc nous ne les aborderons pas dans ce post. 
+Ce sont surement les versions les moins démocratisées de la bibliothèque comme elles sont les plus contraignantes. Tensorflow TPU est une version optimisée uniquement pour du matériel développé par Google donc vous aurez assez de chances de les utiliser. Certaines sources indiquent que Google pourrait les commercialiser sur des segments grand public dans les procahines années mais nous ne les aborderons pas dans ce post. 
 
-### Installer Tensorflow CPU 
 
-Tensorflow CPU repose entièrement sur l'architecture de votre ordinateur. Ainsi, quand l'éditeur de code compile et génère des opérations, ils sont envoyés bruts à l'unité de calcul CPU.
-C'est ensuite ce composant physique de votre ordinateur qui se charge d'effectuer la mise en forme des calculs puis de les exécuter et de renvoyer les résultats. 
-Le Machine Learning effectue majoritairement des opérations matricielles tandis que le CPU est habilité à gérer tous les types d'opérations. 
-Vous pouvez donc imaginer que ce type de programme ne sera pas optimisé pour les applications que l'on souhaite développer et qui demandent des puissances de calculs démentielles.
+Tensorflow CPU repose entièrement sur l'architecture de votre ordinateur. Ainsi, quand l'éditeur de code compile et génère des opérations, ils sont envoyés bruts à l'unité de calcul CPU. C'est ensuite ce composant physique de votre ordinateur qui se charge d'effectuer la mise en forme des calculs puis de les exécuter et de renvoyer les résultats. Le Machine Learning effectue majoritairement des opérations matricielles tandis que le CPU est habilité à gérer tous les types d'opérations. Vous pouvez donc imaginer que ce type de programme ne sera pas optimisé pour les applications que l'on souhaite développer et qui demandent des puissances de calculs conséquentes.
 
-Avant tout, vous avez besoin du langage **Python** installé sur votre machine.
-Vous pouvez le télécharger sur le site [Python.org](www.Python.org).
-Je vous recommande une version 3.6 de Python comme c'est celle qui est le plus compatible avec Tensorflow. 
-Dans le bas de la page, choisissez l'installer qui correspond à votre système d'exploitation. 
-Durant le processus d'installation, n'oubliez pas d'ajouter Python au PATH de votre ordinateur ce qui nous évitera de bricoler les variables d'environnement à ce point-là. 
 
-Vous pouvez maintenant installer Tensorflow en vous servant de pip le package installator inclus dans **Python**. 
-Rien de plus simple, cherchez dans votre menu Démarrer sur Windows l'invité de commande puis insérez la commande suivante 
-```
-pip install tensorflow-cpu==$VERSION$
-```
-Vous pouvez remplacer `$VERSION$` par la version que vous souhaitez installer. 
-Je vous conseille la version 2.0 car c'est la version la plus aboutie de Tensorflow avec des modules les plus avancés pour le développement d'applications. 
-Tandis que Tensorflow 2.1 est encore sujet à des bugs et problèmes de mises à jour. 
+Malgré tout ce que vous avez peut-être pu voir sur Internet jusqu'à présent, la meilleure façon pour installer Tensorflow reste la platerforme [Anaconda](https://www.anaconda.com/distribution/). En effet, elle gère absolument tout le processus d'installation fastidieux de Tensorflow, les compatibilités entre les divers package CUDA, Cudnn et Python et met même à votre disposition une suite d'environnements virtuels.  
 
-C'est tout ! Vous êtes prêt à utiliser **Tensorflow CPU** !
+Avec le lien fourni précédemment, téléchargez l'installateur Anaconda3 en version Python 3.7. Au moment où j'écris ces lignes, seul Python 3.6 est supporté par Tensorflow mais pas de soucis, nous nous en occuperons par la suite. Installez Anaconda sans l'ajouter au PATH de votre ordinateur pour éviter des problèmes de compatibilité par la suite. 
 
+Si vous cherchez "anaconda" dans votre menu Démarrer, vous devriez trouver Spyder, Anaconda Prompt et Anaconda Navigator. Choisissez Anaconda Navigator, le navigateur se lance par la suite et vous affiche les différents éditeurs que vous allez pouvoir utiliser séparément pour chaque environnement virtuel que vous crérez. Allez dans le panneau Environnements pour créer votre venv différent de celui de base (root). Si vous essayez de le créer directement, vous vous appercevrez que seul Python 3.7 est disponible comme langage or ce n'est pas celui qui nous intéresse. Cliquez sur ``update index..`` qui va mettre à jour les packages et les versions de Python disponibles. Maintenant, vous pouvez ré-essayer de créer votre Venv et dans le menu déroulant de Python vous trouverez Python 3.6. Nommez votre Venv ``votreVenv`` et cliquez sur ``Créer``. Maintenant que ``votreVenv`` apparaît dans la colonne de gauche vous devez encore lui ajouter les bibliothèque associées à Tensorflow. Pour ce faire, rien de plus simple: Cherchez Tensorflow dans la barre de recherche de la fenêtre de droite en ayant sélectionné l'option ``Not Installed`` dans le menu déroulant juste à sa gauche. Après avoir coché la case de ``Tensorflow``, faites un clic droit sur cette même case pour sélectionner dans ``Mark for specific version installation``la version de la bibliothèque à installer. Préférez la version 2.0.0 car au jour d'aujourd'hui, c'est la version la plus avancée du package de Google en évitant les bugs récurrents de la dernière version Tensorflow 2.1.0. 
+
+
+C'est tout ! Vous êtes prêt à utiliser **Tensorflow CPU** ! En effet, pas besoin de se précocuper de l'installation de CUDA ou encore Cudnn, Anaconda se charge de trouver et d'installer pour vous les bpnnes versions correspondantes à la version de Tensorflow que vous aurez souhaité installer. La prochaine fois vous pouvez en ouvrant Anaconda Navigator dans le Home, sélectionner votre Venv dabs le menu déroulant et choisir (ou installer si vous ne l'avez pas encore fait) l'éditeur de code. Personnellement, je vous conseillerais d'opter pour Jupyter Notebook pour un premier pas dans le monde du Machine Learning. 
+
+## Tensorflow GPU 
+
+LA version la plus utilisée de Tensorflow. En effet, **Tensorflow GPU** a été optimisée pour l'architecture d'une carte graphique qui correspond bien dans les faits à une majorité de calcul matriciel. Cependant ce développement est assez récent et ne prend pas en charge des cartes graphiques plus vieilles. Pour éxecuter Tensorflow GPU il vous faut impérativement une carte graphique NVIDIA équipée d'une puce qui supporte les CUDA Compute Capability > 3.5. Vérifiez cela avec le lien [NVIDIA](https://developer.nvidia.com/cuda-gpus). 
+
+Si votre carte est compatible et que votre système est suffisamment performant pour gérer des séquences d'opérations lourdes, vous avez deviné que l'installation sera similaire à ce qui a été fait pour installer **Tensorflow CPU**
