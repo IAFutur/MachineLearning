@@ -14,10 +14,10 @@ Malgré tout ce que vous avez peut-être pu voir sur Internet jusqu'à présent,
 
 * Avec le lien fourni précédemment, téléchargez l'installateur Anaconda3 en version Python 3.7. Au moment où j'écris ces lignes, seul Python 3.6 est supporté par Tensorflow mais pas de soucis, nous nous en occuperons par la suite. Installez Anaconda sans l'ajouter au PATH de votre ordinateur pour éviter des problèmes de compatibilité par la suite. 
 
-* Si vous cherchez "anaconda" dans votre menu Démarrer, vous devriez trouver Spyder, Anaconda Prompt et Anaconda Navigator. Choisissez Anaconda Navigator, le navigateur se lance par la suite et vous affiche les différents éditeurs que vous allez pouvoir utiliser séparément pour chaque environnement virtuel que vous crérez. Allez dans le panneau Environnements pour créer votre venv différent de celui de base (root). Si vous essayez de le créer directement, vous vous appercevrez que seul Python 3.7 est disponible comme langage or ce n'est pas celui qui nous intéresse. Cliquez sur ``update index..`` qui va mettre à jour les packages et les versions de Python disponibles. A présent, vous pouvez ré-essayer de créer votre Venv et dans le menu déroulant de Python vous trouverez Python 3.6. Nommez votre Venv ``votreVenv`` et cliquez sur ``Créer``. 
+* Si vous cherchez "anaconda" dans votre menu Démarrer, vous devriez trouver Spyder, Anaconda Prompt et Anaconda Navigator. Choisissez Anaconda Navigator, le navigateur se lance par la suite et vous affiche les différents éditeurs que vous allez pouvoir utiliser séparément pour chaque environnement virtuel que vous crérez. Allez dans le panneau ``Environnements`` pour créer votre venv différent de celui de ``base (root)``. Si vous essayez de le créer directement, vous vous appercevrez que seul Python 3.7 est disponible comme langage or ce n'est pas celui qui nous intéresse. Cliquez sur ``update index..`` qui va mettre à jour les packages et les versions de Python disponibles. A présent, vous pouvez ré-essayer de créer votre Venv et dans le menu déroulant de Python vous trouverez Python 3.6. Nommez votre Venv ``votreVenv`` et cliquez sur ``Créer``. 
 
 <p align="center">
-  <img src="doc/anaconda.png">
+  <img src="doc/anaconda_create.png">
 </p>
   
 
@@ -28,7 +28,7 @@ Malgré tout ce que vous avez peut-être pu voir sur Internet jusqu'à présent,
 </p>
 
 
-C'est tout ! Vous êtes prêt à utiliser **Tensorflow CPU** ! En effet, pas besoin de se précocuper de l'installation de CUDA ou encore Cudnn, Anaconda se charge de trouver et d'installer pour vous les bonnes versions correspondantes à la version de Tensorflow que vous souhaitez installer. La prochaine fois vous pouvez en ouvrant Anaconda Navigator dans le Home, sélectionner votre Venv dans le menu déroulant et choisir (ou installer si vous ne l'avez pas encore fait) l'éditeur de code. Personnellement, je vous conseillerais d'opter pour Jupyter Notebook pour un premier pas dans le monde du Machine Learning. 
+C'est tout ! Vous êtes prêt à utiliser **Tensorflow CPU** ! En effet, pas besoin de se précocuper de l'installation de CUDA ou encore Cudnn, Anaconda se charge de trouver et d'installer pour vous les bonnes versions correspondantes à la version de Tensorflow que vous souhaitez installer. La prochaine fois vous pouvez en ouvrant Anaconda Navigator dans le Home, sélectionner ``votreVenv`` dans le menu déroulant et choisir (ou installer si vous ne l'avez pas encore fait) l'éditeur de code. Personnellement, je vous conseillerais d'opter pour Jupyter Notebook pour un premier pas dans le monde du Machine Learning. 
 
 ## Tensorflow GPU 
 
@@ -45,7 +45,7 @@ Vous pouvez vérifier l'installation correcte de votre biliothèque Tensorflow e
 ```
 import tensorflow as tf 
 ```
-Cette commande vous permet d'importer **Tensorflow GPU** et de la stocker en mémoire en vue d'une utilisation prochaine. C'est souvent le point le plus critique dans les processus d'installation de cette bibliothèque donc si tout se passe bien ici, vous avez fait le plus gros du chemin. 
+Cette commande vous permet d'importer **Tensorflow GPU** et de la stocker en mémoire en vue d'une utilisation prochaine. C'est souvent le point le plus critique dans les processus d'installation de cette bibliothèque donc si tout se passe bien ici, vous avez fait le plus gros du chemin :smiley:. 
 
 ```
 print(tf.__version__)
