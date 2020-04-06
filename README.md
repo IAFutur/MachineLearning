@@ -1,4 +1,4 @@
-# MachineLearning
+# Machine Learning avec IAFutur :computer:
 
 Yo les gens bienvenue sur IAFutur ! :wink: Si vous êtes arrivés sur ce Github c'est surement que vous vous intéressez au Machine Learning. Ça tombe bien moi aussi ! J'ai créé cette plateforme pour démocratiser l'Intelligence Artificielle et le Machine Learning au travers de leurs applications dans la communauté française. Donc si ces quelques lignes de code et d'explication peuvent permettre à un plus grand nombre de découvrir et de s'approprier cette technologie qui promet de révolutionner le XXIe siècle, j'en serais on ne peut plus fier. 
 
