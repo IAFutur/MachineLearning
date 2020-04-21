@@ -18,14 +18,14 @@ Malgré tout ce que vous avez peut-être pu voir sur Internet jusqu'à présent,
 * Si vous cherchez "anaconda" dans votre menu Démarrer, vous devriez trouver Spyder, Anaconda Prompt et Anaconda Navigator. Choisissez Anaconda Navigator, le navigateur se lance par la suite et vous affiche les différents éditeurs que vous allez pouvoir utiliser séparément pour chaque environnement virtuel que vous créerez. Allez dans le panneau ``Environnements`` pour créer votre venv différent de celui de ``base (root)``. Si vous essayez de le créer directement, vous vous apercevrez que seul Python 3.7 est disponible comme langage or ce n'est pas celui qui nous intéresse. Cliquez sur ``update index..`` qui va mettre à jour les packages et les versions de Python disponibles. A présent, vous pouvez réessayer de créer votre Venv et dans le menu déroulant de Python vous trouverez Python 3.6. Nommez votre Venv ``votreVenv`` et cliquez sur ``Créer``. 
 
 <p align="center">
-  <img src="doc/anaconda_create.png">
+  <img src="doc/anaconda/anaconda_create.png">
 </p>
   
 
 * Maintenant que ``votreVenv`` apparaît dans la colonne de gauche vous devez encore lui ajouter les bibliothèques associées à Tensorflow. Pour ce faire, rien de plus simple: Cherchez Tensorflow dans la barre de recherche de la fenêtre de droite en ayant sélectionné l'option ``Not Installed`` dans le menu déroulant juste à sa gauche. Après avoir coché la case de ``Tensorflow``, faites un clic droit sur cette même case pour sélectionner dans ``Mark for specific version installation``la version de la bibliothèque à installer. Préférez la version 2.0.0 car au jour d'aujourd'hui, c'est la version la plus avancée du package de Google en évitant les bugs récurrents de la dernière version Tensorflow 2.1.0. 
 
 <p align="center">
-  <img src="doc/anaconda_install.png">
+  <img src="doc/anaconda/anaconda_install.png">
 </p>
 
 
@@ -64,7 +64,7 @@ tf.test.is_built_with_cuda()
 Avec cette dernière commande vous vérifiez que votre module **Tensorflow GPU** est capable de faire transiter les calculs à la suite CUDA (que Anaconda a installé avec ``tensorflow-gpu``) qui elle les transmet aux cœurs du GPU. 
 
 <p align="center">
-  <img src="doc/tensorflow_install.png">
+  <img src="doc/anaconda/tensorflow_install.png">
 </p>
 
 Si vous avez franchi toutes ces vérifications, Félicitations ! Votre machine est dorénavant capable d'exécuter des applications complexes de Machine Learning.
